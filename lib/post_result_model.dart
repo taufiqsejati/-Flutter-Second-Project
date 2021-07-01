@@ -21,10 +21,12 @@ class PostResult {
 
   static Future<PostResult> connectToApi(String name, String job) async {
     String apiURL = "https://reqres.in/api/users";
-
-    var apiResult = await http.post(apiURL, body: {"name": name, "job": job});
-    var jsonObject = json.decode(apiResult.body);
-
-    return PostResult.createPostResult(jsonObject);
+    try {
+      var apiResult = await http.post(apiURL, body: {"name": name, "job": job});
+      var jsonObject = json.decode(apiResult.body);
+      return PostResult.createPostResult(jsonObject);
+    } catch (e) {
+      print(e.toString());
+    }
   }
 }
