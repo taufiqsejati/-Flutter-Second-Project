@@ -20,7 +20,6 @@ class User {
       var apiResult = await http.get(apiURL);
       var jsonObject = json.decode(apiResult.body);
       var userData = (jsonObject as Map<String, dynamic>)['data'];
-
       return User.createUser(userData);
     } catch (e) {
       print(e.toString());
