@@ -1,8 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/login_page.dart';
+import 'package:flutter_application_1/main_part_1.dart';
+import 'package:flutter_application_1/main_part_2.dart';
+import 'package:flutter_application_1/main_part_3.dart';
+import 'package:flutter_application_1/main_part_4.dart';
+import 'package:flutter_application_1/main_part_5.dart';
+import 'package:flutter_application_1/main_part_6.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_application_1/bloc/counter_bloc.dart';
 import 'package:flutter_application_1/cubit/countercubit_cubit.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 void main() {
   runApp(MyApp());
@@ -11,93 +17,82 @@ void main() {
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    // return MaterialApp(debugShowCheckedModeBanner: false, home: MainPagee());
     return MaterialApp(
         debugShowCheckedModeBanner: false,
         home: BlocProvider(
             create: (context) => CounterBloc(),
             child: BlocProvider(
-                create: (context) => CountercubitCubit(), child: MainPage())));
+                create: (context) => CountercubitCubit(), child: MainPagee())));
   }
 }
 
-class MainPage extends StatefulWidget {
-  @override
-  _MainPageState createState() => _MainPageState();
-}
-
-class _MainPageState extends State<MainPage> {
+class MainPagee extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Column(
-        children: [
-          Flexible(
-              flex: 1,
-              child: Container(
-                color: Colors.black,
-                height: double.infinity,
-                width: double.infinity,
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Text('Bloc State Management',
-                        style: GoogleFonts.poppins(
-                          fontSize: 25,
-                          color: Colors.white,
-                        )),
-                    BlocBuilder<CounterBloc, CounterState>(
-                      builder: (_, state) => Text(
-                          (state is CounterBlocState) ? "${state.value}" : "-",
-                          style: GoogleFonts.poppins(
-                              fontSize: 35,
-                              fontWeight: FontWeight.w600,
-                              color: Colors.white)),
-                    ),
-                    RaisedButton(
-                      onPressed: () {
-                        context
-                            .bloc<CounterBloc>()
-                            .add(CounterBlocIncrement(1));
-                      },
-                      child: Text("+",
-                          style: GoogleFonts.poppins(
-                              fontSize: 20, fontWeight: FontWeight.w600)),
-                    )
-                  ],
-                ),
-              )),
-          Flexible(
-              flex: 1,
-              child: Container(
-                height: double.infinity,
-                width: double.infinity,
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Text('Cubit State Management',
-                        style: GoogleFonts.poppins(
-                          fontSize: 25,
-                        )),
-                    BlocBuilder<CountercubitCubit, CountercubitState>(
-                        builder: (_, cubitState) => Text(
-                            (cubitState is CountercubitStateFilled)
-                                ? "${cubitState.value}"
-                                : "-",
-                            style: GoogleFonts.poppins(
-                                fontSize: 35, fontWeight: FontWeight.w600))),
-                    RaisedButton(
-                      onPressed: () {
-                        context.bloc<CountercubitCubit>().cubitIncrement(1);
-                      },
-                      child: Text("+",
-                          style: GoogleFonts.poppins(
-                              fontSize: 20, fontWeight: FontWeight.w600)),
-                    )
-                  ],
-                ),
-              ))
-        ],
+      appBar: AppBar(
+        title: Text('Route Page'),
       ),
+      body: Center(
+          child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Text('My Project'),
+          SizedBox(
+            height: 10,
+          ),
+          RaisedButton(
+              child: Text('Navigation'),
+              onPressed: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context) {
+                  return LoginPage();
+                }));
+              }),
+          RaisedButton(
+              child: Text('Template 1'),
+              onPressed: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context) {
+                  return MainPart1();
+                }));
+              }),
+          RaisedButton(
+              child: Text('Api POST'),
+              onPressed: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context) {
+                  return MainPart3();
+                }));
+              }),
+          RaisedButton(
+              child: Text('Api GET Single Data'),
+              onPressed: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context) {
+                  return MainPart2();
+                }));
+              }),
+          RaisedButton(
+              child: Text('Api GET Multiple Data'),
+              onPressed: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context) {
+                  return MainPart5();
+                }));
+              }),
+          RaisedButton(
+              child: Text('Change Color BLoC State'),
+              onPressed: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context) {
+                  return MainPart4();
+                }));
+              }),
+          // RaisedButton(
+          //     child: Text('Counter BLoC State & Cubit State'),
+          //     onPressed: () {
+          //       Navigator.push(context, MaterialPageRoute(builder: (context) {
+          //         return MainPart6();
+          //       }));
+          //     }),
+        ],
+      )),
     );
   }
 }
