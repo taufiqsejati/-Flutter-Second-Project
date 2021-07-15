@@ -46,10 +46,8 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
-    - assets/images/ic_payment.png
-    - assets/images/trump.jpeg
-    - assets/animation/switch_daytime.flr
-    - assets/animation/kit8net.json
+    - assets/images/
+    - assets/animation/
   #   - images/a_dot_ham.jpeg
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
@@ -65,6 +63,10 @@ flutter:
       fonts:
         - asset: assets/fonts/Poppins-SemiBold.ttf
           weight: 700
+        - asset: assets/fonts/Poppins-Medium.ttf
+          weight: 500
+        - asset: assets/fonts/Poppins-Regular.ttf
+          weight: 400
         - asset: assets/fonts/Poppins-Light.ttf
           weight: 300
   #       - asset: fonts/Schyler-Italic.ttf

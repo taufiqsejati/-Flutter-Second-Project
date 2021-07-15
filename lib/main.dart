@@ -4,6 +4,10 @@ import 'package:flutter_application_1/main_part_1.dart';
 import 'package:flutter_application_1/main_part_10.dart';
 import 'package:flutter_application_1/main_part_11.dart';
 import 'package:flutter_application_1/main_part_12.dart';
+import 'package:flutter_application_1/main_part_13.dart';
+import 'package:flutter_application_1/main_part_14.dart';
+import 'package:flutter_application_1/main_part_15.dart';
+import 'package:flutter_application_1/main_part_16.dart';
 import 'package:flutter_application_1/main_part_2.dart';
 import 'package:flutter_application_1/main_part_3.dart';
 import 'package:flutter_application_1/main_part_4.dart';
@@ -24,7 +28,10 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // return MaterialApp(debugShowCheckedModeBanner: false, home: MainPagee());
-    return MaterialApp(debugShowCheckedModeBanner: false, home: MainPagee());
+    return MaterialApp(
+        debugShowCheckedModeBanner: false,
+        theme: ThemeData(fontFamily: 'Poppins'),
+        home: MainPagee());
   }
 }
 
@@ -141,6 +148,38 @@ class MainPagee extends StatelessWidget {
                       Navigator.push(context,
                           MaterialPageRoute(builder: (context) {
                         return MainPart12();
+                      }));
+                    }),
+                RaisedButton(
+                    child: Text('Design to Code 1'),
+                    onPressed: () {
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) {
+                        return MainPart13();
+                      }));
+                    }),
+                RaisedButton(
+                    child: Text('Design to Code 2'),
+                    onPressed: () {
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) {
+                        return MainPart14();
+                      }));
+                    }),
+                RaisedButton(
+                    child: Text('Design to Code 3'),
+                    onPressed: () {
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) {
+                        return MainPart15();
+                      }));
+                    }),
+                RaisedButton(
+                    child: Text('Design to Code 4'),
+                    onPressed: () {
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) {
+                        return MainPart16();
                       }));
                     }),
               ],
