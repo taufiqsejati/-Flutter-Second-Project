@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_application_1/login_page.dart';
 import 'package:flutter_application_1/main_part_1.dart';
 import 'package:flutter_application_1/main_part_10.dart';
@@ -8,7 +9,13 @@ import 'package:flutter_application_1/main_part_13.dart';
 import 'package:flutter_application_1/main_part_14.dart';
 import 'package:flutter_application_1/main_part_15.dart';
 import 'package:flutter_application_1/main_part_16.dart';
+import 'package:flutter_application_1/main_part_17.dart';
+import 'package:flutter_application_1/main_part_18.dart';
+import 'package:flutter_application_1/main_part_19.dart';
 import 'package:flutter_application_1/main_part_2.dart';
+import 'package:flutter_application_1/main_part_20.dart';
+import 'package:flutter_application_1/main_part_21.dart';
+import 'package:flutter_application_1/main_part_22.dart';
 import 'package:flutter_application_1/main_part_3.dart';
 import 'package:flutter_application_1/main_part_4.dart';
 import 'package:flutter_application_1/main_part_5.dart';
@@ -21,7 +28,12 @@ import 'package:flutter_application_1/bloc/counter_bloc.dart';
 import 'package:flutter_application_1/cubit/countercubit_cubit.dart';
 
 void main() {
-  runApp(MyApp());
+  // runApp(MyApp());
+  WidgetsFlutterBinding.ensureInitialized();
+  SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp])
+      .then((_) {
+    runApp(new MyApp());
+  });
 }
 
 class MyApp extends StatelessWidget {
@@ -180,6 +192,69 @@ class MainPagee extends StatelessWidget {
                       Navigator.push(context,
                           MaterialPageRoute(builder: (context) {
                         return MainPart16();
+                      }));
+                    }),
+                RaisedButton(
+                    child: Text('Appbar Bercorak'),
+                    onPressed: () {
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) {
+                        return MainPart17();
+                      }));
+                    }),
+                RaisedButton(
+                    child: Text(
+                      'AppBar dengan Custom Height (PrefferedSized)',
+                      textAlign: TextAlign.center,
+                    ),
+                    onPressed: () {
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) {
+                        return MainPart18();
+                      }));
+                    }),
+                RaisedButton(
+                    child: Text(
+                      'TabBar',
+                      textAlign: TextAlign.center,
+                    ),
+                    onPressed: () {
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) {
+                        return MainPart19();
+                      }));
+                    }),
+                RaisedButton(
+                    child: Text(
+                      'Hero & ClipRRect',
+                      textAlign: TextAlign.center,
+                    ),
+                    onPressed: () {
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) {
+                        return MainPart20();
+                      }));
+                    }),
+                RaisedButton(
+                    child: Text(
+                      'Card Widget',
+                      textAlign: TextAlign.center,
+                    ),
+                    onPressed: () {
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) {
+                        return MainPart21();
+                      }));
+                    }),
+                RaisedButton(
+                    child: Text(
+                      'Positioned, FloatingActionButton, LoginPage',
+                      textAlign: TextAlign.center,
+                    ),
+                    onPressed: () {
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) {
+                        return MainPart22();
                       }));
                     }),
               ],

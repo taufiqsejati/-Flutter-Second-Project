@@ -4,11 +4,7 @@ import 'package:flutter_application_1/cubit/countercubit_cubit.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-void main() {
-  runApp(MyApp());
-}
-
-class MyApp extends StatelessWidget {
+class MainPart6 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
