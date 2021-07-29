@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'font_style.dart';
-import 'custom_colors.dart';
+import 'package:flutter_application_1/font_style.dart';
+import 'package:flutter_application_1/custom_colors.dart';
 
 class MainPart1 extends StatelessWidget {
   // This widget is the root of your application.

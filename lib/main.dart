@@ -1,28 +1,35 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_application_1/login_page.dart';
-import 'package:flutter_application_1/main_part_1.dart';
-import 'package:flutter_application_1/main_part_10.dart';
-import 'package:flutter_application_1/main_part_11.dart';
-import 'package:flutter_application_1/main_part_12.dart';
-import 'package:flutter_application_1/main_part_13.dart';
-import 'package:flutter_application_1/main_part_14.dart';
-import 'package:flutter_application_1/main_part_15.dart';
-import 'package:flutter_application_1/main_part_16.dart';
-import 'package:flutter_application_1/main_part_17.dart';
-import 'package:flutter_application_1/main_part_18.dart';
-import 'package:flutter_application_1/main_part_19.dart';
-import 'package:flutter_application_1/main_part_2.dart';
-import 'package:flutter_application_1/main_part_20.dart';
-import 'package:flutter_application_1/main_part_21.dart';
-import 'package:flutter_application_1/main_part_22.dart';
-import 'package:flutter_application_1/main_part_3.dart';
-import 'package:flutter_application_1/main_part_4.dart';
-import 'package:flutter_application_1/main_part_5.dart';
-import 'package:flutter_application_1/main_part_6.dart';
-import 'package:flutter_application_1/main_part_7.dart';
-import 'package:flutter_application_1/main_part_8.dart';
-import 'package:flutter_application_1/main_part_9.dart';
+import 'package:flutter_application_1/main1-5/main_part_1.dart';
+import 'package:flutter_application_1/main21-25/main_part_25.dart';
+import 'package:flutter_application_1/main26-30/main_part_26.dart';
+import 'package:flutter_application_1/main26-30/main_part_27.dart';
+import 'package:flutter_application_1/main26-30/main_part_28.dart';
+import 'package:flutter_application_1/main26-30/main_part_29.dart';
+import 'package:flutter_application_1/main6-10/main_part_10.dart';
+import 'package:flutter_application_1/main11-15/main_part_11.dart';
+import 'package:flutter_application_1/main11-15/main_part_12.dart';
+import 'package:flutter_application_1/main11-15/main_part_13.dart';
+import 'package:flutter_application_1/main11-15/main_part_14.dart';
+import 'package:flutter_application_1/main11-15/main_part_15.dart';
+import 'package:flutter_application_1/main16-20/main_part_16.dart';
+import 'package:flutter_application_1/main16-20/main_part_17.dart';
+import 'package:flutter_application_1/main16-20/main_part_18.dart';
+import 'package:flutter_application_1/main16-20/main_part_19.dart';
+import 'package:flutter_application_1/main1-5/main_part_2.dart';
+import 'package:flutter_application_1/main16-20/main_part_20.dart';
+import 'package:flutter_application_1/main21-25/main_part_21.dart';
+import 'package:flutter_application_1/main21-25/main_part_22.dart';
+import 'package:flutter_application_1/main21-25/main_part_23.dart';
+import 'package:flutter_application_1/main21-25/main_part_24.dart';
+import 'package:flutter_application_1/main1-5/main_part_3.dart';
+import 'package:flutter_application_1/main1-5/main_part_4.dart';
+import 'package:flutter_application_1/main1-5/main_part_5.dart';
+import 'package:flutter_application_1/main6-10/main_part_6.dart';
+import 'package:flutter_application_1/main6-10/main_part_7.dart';
+import 'package:flutter_application_1/main6-10/main_part_8.dart';
+import 'package:flutter_application_1/main6-10/main_part_9.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_application_1/bloc/counter_bloc.dart';
 import 'package:flutter_application_1/cubit/countercubit_cubit.dart';
@@ -255,6 +262,83 @@ class MainPagee extends StatelessWidget {
                       Navigator.push(context,
                           MaterialPageRoute(builder: (context) {
                         return MainPart22();
+                      }));
+                    }),
+                RaisedButton(
+                    child: Text(
+                      'Timer',
+                      textAlign: TextAlign.center,
+                    ),
+                    onPressed: () {
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) {
+                        return MainPart23();
+                      }));
+                    }),
+                RaisedButton(
+                    child: Text(
+                      'Widget Slider with Transition',
+                      textAlign: TextAlign.center,
+                    ),
+                    onPressed: () {
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) {
+                        return MainPart24();
+                      }));
+                    }),
+                RaisedButton(
+                    child: Text(
+                      'Drop Down Button',
+                      textAlign: TextAlign.center,
+                    ),
+                    onPressed: () {
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) {
+                        return MainPart25();
+                      }));
+                    }),
+                RaisedButton(
+                    child: Text(
+                      'Division',
+                      textAlign: TextAlign.center,
+                    ),
+                    onPressed: () {
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) {
+                        return MainPart26();
+                      }));
+                    }),
+                RaisedButton(
+                    child: Text(
+                      'SelectableText, ToogleButtons, ColorFilter',
+                      textAlign: TextAlign.center,
+                    ),
+                    onPressed: () {
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) {
+                        return MainPart27();
+                      }));
+                    }),
+                RaisedButton(
+                    child: Text(
+                      'Product Card',
+                      textAlign: TextAlign.center,
+                    ),
+                    onPressed: () {
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) {
+                        return MainPart28();
+                      }));
+                    }),
+                RaisedButton(
+                    child: Text(
+                      'Widget Slider using Page View',
+                      textAlign: TextAlign.center,
+                    ),
+                    onPressed: () {
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) {
+                        return MainPart29();
                       }));
                     }),
               ],

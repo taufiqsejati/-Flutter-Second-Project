@@ -24,12 +24,14 @@ dependencies:
   flutter:
     sdk: flutter
   cupertino_icons: ^1.0.0
+  division: ^0.9.0
   flare_flutter: ^1.8.1
   flutter_bloc: ^6.0.1
   google_fonts: ^1.1.2
   http: ^0.12.0+2
   logger: ^1.0.0
   lottie: ^0.4.0+1
+  qrscan: ^0.3.2
 
 dev_dependencies:
   flutter_test:
