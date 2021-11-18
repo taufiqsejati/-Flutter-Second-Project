@@ -3,7 +3,6 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/widgets/movie_box.dart';
-import 'package:qrscan/qrscan.dart' as scanner;
 
 class MainPart24 extends StatefulWidget {
   @override
